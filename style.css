@@ -1,0 +1,36 @@
+:root {
+  --bg: #fff7f8;
+  --ink: #3a1f24;
+  --muted: #6e3f47;
+  --accent: #b5302b;
+  --line: #f1d3d8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1416;
+    --ink: #f6e9eb;
+    --muted: #d4b3b9;
+    --accent: #ff8f86;
+    --line: #3a2a2e;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 system-ui, "Segoe UI", sans-serif;
+}
+
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+nav { font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 24px; }
+nav a[aria-current="page"] { font-weight: 700; text-decoration: none; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; color: var(--accent); text-wrap: balance; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+.lede { color: var(--muted); margin: 0 0 8px; }
+.logo { border-radius: 50%; display: block; margin-bottom: 16px; }
+a { color: var(--accent); }
+code { font-size: 14px; overflow-wrap: anywhere; }
